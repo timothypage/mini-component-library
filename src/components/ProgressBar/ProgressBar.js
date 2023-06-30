@@ -23,9 +23,9 @@ const Styled = styled.div`
 
 const ProgressBar = ({ value, size }) => {
   return (
-    <Styled size={size}>
+    <Styled role="progressbar" aria-valuenow={value} aria-valuemin="0" aria-valuemax="100" size={size}>
       <VisuallyHidden>progress is {value} percent</VisuallyHidden>
-      <div style={{height: 100+'%', width: value + '%', background: "blue"}}></div>
+      <div style={{height: 100+'%', width: value + '%', background: COLORS.primary}}></div>
     </Styled>
   );
 };
