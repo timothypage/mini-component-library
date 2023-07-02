@@ -15,6 +15,8 @@ const StyledSelect = styled.select`
 
   opacity: 0;
   appearance: none;
+
+  cursor: pointer;
   `;
 
 const StyledSelectDisplay = styled.div`
@@ -29,6 +31,10 @@ const StyledSelectDisplay = styled.div`
   ${StyledSelect}:focus + & {
     outline: 5px solid #4374CB;
     outline: 5px auto --webkit-focus-ring-color;
+  }
+
+  ${StyledSelect}:hover + & {
+    color: black;
   }
 `;
 
