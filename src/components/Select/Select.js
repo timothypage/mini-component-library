@@ -25,6 +25,11 @@ const StyledSelectDisplay = styled.div`
   border-radius: 8px;
   padding: 12px 16px;
   padding-right: 52px;
+
+  ${StyledSelect}:focus + & {
+    outline: 5px solid #4374CB;
+    outline: 5px auto --webkit-focus-ring-color;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -42,6 +47,7 @@ const IconWrapper = styled.div`
   height: 24px;
 
   margin: auto;
+  pointer-events: none;
 `;
 
 const Select = ({ label, value, onChange, children }) => {
